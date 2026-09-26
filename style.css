@@ -453,6 +453,161 @@ nav ul li a.active {
   color: #a16207;
 }
 
+/* HOME — STATS STRIP */
+
+.stats-strip {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0;
+  background-color: #7c3aed;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 28px 40px;
+  flex: 1 1 140px;
+  border-right: 1px solid rgba(255,255,255,0.15);
+}
+
+.stat:last-child {
+  border-right: none;
+}
+
+.stat-num {
+  font-size: 32px;
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.1;
+}
+
+.stat-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: rgba(255,255,255,0.75);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: 4px;
+}
+
+/* HOME — SECTIONS */
+
+.home-section {
+  padding: 60px 8%;
+}
+
+.home-section.alt-bg {
+  background-color: #faf5ff;
+}
+
+.section-heading {
+  font-size: 22px;
+  font-weight: 800;
+  color: #1f2328;
+  margin-bottom: 28px;
+  padding-bottom: 10px;
+  border-bottom: 3px solid #7c3aed;
+  display: inline-block;
+}
+
+/* HOME — ABOUT SNAPSHOT */
+
+.home-about {
+  max-width: 680px;
+}
+
+.home-about p {
+  color: #57606a;
+  font-size: 15px;
+  line-height: 1.8;
+  margin-bottom: 12px;
+}
+
+/* HOME — HIGHLIGHTS */
+
+.highlight-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+}
+
+.highlight-card {
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 24px 20px;
+  background-color: #ffffff;
+  transition: border-color 0.2s;
+}
+
+.highlight-card:hover {
+  border-color: #7c3aed;
+}
+
+.highlight-icon {
+  font-size: 28px;
+  margin-bottom: 12px;
+  line-height: 1;
+}
+
+.highlight-card h3 {
+  font-size: 15px;
+  font-weight: 700;
+  color: #1f2328;
+  margin-bottom: 8px;
+}
+
+.highlight-card p {
+  font-size: 13.5px;
+  color: #57606a;
+  line-height: 1.6;
+}
+
+/* HOME — QUICK LINKS */
+
+.quick-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.quick-link-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 24px 20px;
+  background-color: #ffffff;
+  color: #1f2328;
+  transition: border-color 0.2s, background-color 0.2s;
+  text-decoration: none;
+}
+
+.quick-link-card:hover {
+  border-color: #7c3aed;
+  background-color: #faf5ff;
+}
+
+.quick-link-card span {
+  font-size: 26px;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.quick-link-card strong {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.quick-link-card p {
+  font-size: 13px;
+  color: #57606a;
+  margin: 0;
+}
+
 /* CONTACT */
 
 .contact-list {
@@ -498,6 +653,73 @@ nav ul li a.active {
   font-size: 14px;
   font-weight: 600;
   color: #1f2328;
+}
+
+/* CONTACT FORM */
+
+.contact-form-wrap {
+  margin-top: 44px;
+  padding: 32px;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  background-color: #ffffff;
+  max-width: 660px;
+}
+
+.form-heading {
+  font-size: 18px;
+  font-weight: 800;
+  color: #1f2328;
+  margin-bottom: 6px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #1f2328;
+}
+
+.req {
+  color: #7c3aed;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: inherit;
+  color: #1f2328;
+  background-color: #ffffff;
+  outline: none;
+  transition: border-color 0.2s;
+  resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #7c3aed;
+  box-shadow: 0 0 0 3px rgba(124,58,237,0.1);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #adb5bd;
 }
 
 /* FOOTER */
@@ -549,6 +771,22 @@ footer {
 
   .contact-item {
     max-width: 100%;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-form-wrap {
+    padding: 20px 16px;
+  }
+
+  .stat {
+    padding: 20px 24px;
+  }
+
+  .home-section {
+    padding: 40px 6%;
   }
 }
 
